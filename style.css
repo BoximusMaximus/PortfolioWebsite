@@ -1,6 +1,12 @@
-.navbar{
-    display: flex;
-    float: left;
-    width: 100%;
+ul {
+    font-size: 32px;
     justify-content: center;
+    display: flex;
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    align-self: center;
+}
+li + li {
+    margin-left: 10px;
 }
