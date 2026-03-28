@@ -1,11 +1,17 @@
 .navbar {
     font-size: 36px;
+    font-weight: bold;
     justify-content: center;
     display: flex;
     list-style-type: none;
     margin: 20px;
     padding: 0;
-    align-self: center;
+}
+
+.navbar a:hover {
+    border: 2px whitesmoke solid;
+    border-radius: 10px;
+    color: darkseagreen;
 }
 .navbar li {
     margin-left: 10px;
