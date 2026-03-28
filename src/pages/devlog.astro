@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+import '../layouts/style.css';
+import Navigation from "../components/Navigation.astro";
+---
 <head>
     <meta charset="UTF-8">
     <title>Chris's Devlog</title>
-    <link rel="stylesheet" href="../layouts/style.css">
-
 </head>
 <body>
 
-<ul class="navbar">
-    <li><a href="/index.astro">Home</a></li>
-    <li><a href="/aboutme.astro">About Me</a></li>
-    <li><a href="/portfolio.astro">Portfolio</a></li>
-    <li><a href="/devlog.astro">Devlog</a></li>
-</ul>
+<Navigation />
 <hr>
 <div class="devlog_entry">
     <h1>Mar 18 2026: The Great Shift</h1>
@@ -21,7 +16,7 @@
     <p> My purpose for this website was to impress those who view it. Pouring all my devlogs
         directly into an html is NOT going to cut it. My devlog entries need to be stored as separate markups and my
         devlog.html (now devlog.astro) needs to represent them in a visually appealing manner. This meant
-        I needed to use a framework. Enter Astro. I felt Astro best represented my needs and its documentation
+        I needed to use a framework to assist this process. Enter Astro. I felt Astro best represented my needs and its documentation
         appears simple and cohesive. Ive switched my project over and wow it has over complicated everything.
         Tomorrow I need to make my website work as intended again and create an expandable system for my devlogs,
         but this is a tomorrow issue and today is almost behind me. Thank you for reading my third devlog.
@@ -69,4 +64,3 @@
 
 </div>
 </body>
-</html>

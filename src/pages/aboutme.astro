@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+import '../layouts/style.css';
+import Navigation from "../components/Navigation.astro";
+
+---
 <head>
     <meta charset="UTF-8">
     <title>About Me</title>
-    <link rel="stylesheet" href="../layouts/style.css">
 </head>
 <body>
 
-<ul class="navbar">
-    <li><a href="/index.astro">Home</a></li>
-    <li><a href="/aboutme.astro">About Me</a></li>
-    <li><a href="/portfolio.astro">Portfolio</a></li>
-    <li><a href="/devlog.astro">Devlog</a></li>
-</ul>
+<Navigation />
+
 <hr>
 
 <div>
     <p>This is About me!</p>
 </div>
 </body>
-</html>

@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+import '../layouts/style.css';
+import Navigation from "../components/Navigation.astro";
+
+---
 <head>
     <meta charset="UTF-8">
     <title>Chris's Portfolio</title>
-    <link rel="stylesheet" href="../layouts/style.css">
 
 </head>
 <body>
 
-<ul class="navbar">
-    <li><a href="/index.astro">Home</a></li>
-    <li><a href="/aboutme.astro">About Me</a></li>
-    <li><a href="/portfolio.astro">Portfolio</a></li>
-    <li><a href="/devlog.astro">Devlog</a></li>
-</ul>
+<Navigation />
+
 <hr>
 
 <div>
     <p>This is my portfolio!</p>
+
+    <p>Feel free to look over my Github! <a href="https://github.com/BoximusMaximus?tab=repositories" target="_blank">Github</a></p>
 </div>
 </body>
-</html>
