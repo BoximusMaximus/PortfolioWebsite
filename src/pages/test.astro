@@ -1,0 +1,32 @@
+---
+import Navigation from "../components/Navigation.astro";
+import { getCollection, getEntry } from 'astro:content';
+const allDevlogs = (await getCollection('devlog')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+import '../layouts/style.css';
+---
+<head>
+    <meta charset="UTF-8">
+    <title>Chris's Devlog</title>
+</head>
+<Navigation/>
+<body>
+    <div>
+        <ul>
+            {allDevlogs.map(log => (
+                    <li><a href={`./src/content/devlogs/${log.id}`}>{log.data.title}</a></li>
+                    <li><a href={'./src/content/devlogs/devlog-01.md'}>test</a></li>
+            ))}
+        </ul>
+    </div>
+    <div>
+        <h1>
+        </h1>
+    </div>
+    <div>
+        <h1>
+        </h1>
+    </div>
+</body>
+

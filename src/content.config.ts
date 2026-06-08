@@ -1,20 +1,15 @@
-// 1. Import utilities from `astro:content`
 import { defineCollection } from 'astro:content';
-
-// 2. Import loader(s)
 import { glob } from 'astro/loaders';
-
-// 3. Import Zod
 import { z } from 'astro/zod';
 
-// 4. Define a `loader` and `schema` for each collection
-const devlogs = defineCollection({
-    loader: glob({ base: '../devlogs', pattern: '**/*.{md,mdx}' }),
+const devlog = defineCollection({
+    // Load Markdown and MDX files in the `src/content/devlog/` directory.
+    loader: glob({ base: './src/content/devlogs', pattern: '**/*.{md,mdx}' }),
+    // Type-check frontmatter using a schema
     schema: z.object({
-        title: z.string(),
-        pubDate: z.coerce.date(),
-    }),
+    title: z.string(),
+    pubDate: z.coerce.date(),
+    })
 });
-
-// 5. Export a single `collections` object to register your collection(s)
-export const collections = { devlogs };
+export const collections = { devlog };
+console.log(devlog)
