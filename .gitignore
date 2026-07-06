@@ -24,4 +24,4 @@ pnpm-debug.log*
 .idea/
 
 # devlog storage folder
-src/content/devlogs/
+src/content/
