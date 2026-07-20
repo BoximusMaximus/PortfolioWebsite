@@ -20,22 +20,23 @@
     border: darkgray ridge 3px;
     border-radius: 10px;
     background-color: darkslategray;
-    color: whitesmoke;
-    padding: 10px;
+    color: skyblue;
+    padding-left: 20%;
+    padding-right: 20%;
     margin-top: 20px;
-    margin-left: 10px;
-    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    display: block;
+    align-items: center;
 }
 .devlog_entry iframe{
     border: black solid 10px;
     display: block;
-    margin: auto;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.devlog_entry h1 {
-    text-align: center;
-    color: skyblue;
-}
-
 html{
     background-color: black;
     color: white;
