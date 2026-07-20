@@ -3,9 +3,10 @@ import '../layouts/style.css';
 import Navigation from "../components/Navigation.astro";
 import type { MarkdownInstance } from 'astro';
 import { marked } from 'marked';
+
 interface Frontmatter {
     title: string;
-    description?: string;
+    date?: string;
 }
 
 const posts = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('../content/*.md', { eager: true }));
@@ -24,12 +25,11 @@ const posts = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('../
             <h1 set:html={post.frontmatter.title}></h1>
         </div>
         <div>
-            <h3 set:html={post.frontmatter.date}></h1>
+            <h3 set:html={post.frontmatter.date}></h3>
         </div>
         <article set:html={marked.parse(post.rawContent())}></article>
     </div>
     )}
 </div>
 
-</div>
 </body>
