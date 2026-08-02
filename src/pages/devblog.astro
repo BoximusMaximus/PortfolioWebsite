@@ -20,30 +20,13 @@ import type { MarkdownInstance } from 'astro';
 </head>
 <body>
 <div>
-
-</div>
-<Navigation />
-<div>
-    <ul>
-    {allBlogPosts.map(post => (
-        <li><a href={`/devblogs/${post.id}`}>{post.data.title}{post.data.pubDate}</a></li>
-    ))}
-    </ul>
-</div>
-<!-- <DevblogsContainer/> -->
-<!-- <div>
-    {posts.reverse().map(post => 
-    <div class="devlog_entry">
-        <div>
-            <h1 set:html={post.frontmatter.title}></h1>
-        </div>
-        <div>
-            <h3 set:html={post.frontmatter.date}></h1>
-        </div>
-        <article set:html={marked.parse(post.rawContent())}></article>
+    <Navigation />
+    <div>
+        <ul>
+        {allBlogPosts.map(post => (
+            <li><a href={`/devblogs/${post.id}`}>{post.data.title}{post.id}</a></li>
+        ))}
+        </ul>
     </div>
-    )}
-</div> -->
-
 </div>
 </body>
