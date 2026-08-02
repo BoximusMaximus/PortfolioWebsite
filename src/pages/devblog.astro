@@ -2,23 +2,35 @@
 import '../layouts/style.css';
 import Navigation from "../components/Navigation.astro";
 import DevblogsContainer from "../components/DevblogsContainer.jsx"
-import type { MarkdownInstance } from 'astro';
-import { marked } from 'marked';
-interface Frontmatter {
-    title: string;
-    description?: string;
-}
+import { getCollection, getEntry } from 'astro:content';
 
-const posts = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('../content/*.md', { eager: true }));
+import type { MarkdownInstance } from 'astro';
+// interface Frontmatter {
+//     title: string;
+//     description?: string;
+// }
+
+// const posts = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('../content/*.md', { eager: true }));
+
+  const allBlogPosts = await getCollection("devblog")
 ---
 <head>
     <meta charset="UTF-8">
     <title>Chris's Devlog</title>
 </head>
 <body>
+<div>
 
+</div>
 <Navigation />
-<DevblogsContainer/>
+<div>
+    <ul>
+    {allBlogPosts.map(post => (
+        <li><a href={`/devblogs/${post.id}`}>{post.data.title}{post.data.pubDate}</a></li>
+    ))}
+    </ul>
+</div>
+<!-- <DevblogsContainer/> -->
 <!-- <div>
     {posts.reverse().map(post => 
     <div class="devlog_entry">
