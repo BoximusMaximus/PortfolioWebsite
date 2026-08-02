@@ -13,7 +13,7 @@ packages/button
 │   ├── components
 │   ├── layouts
 │   ├── pages
-│   ├── content
+│   ├── devblogs
         ├──devblog1.md
         ├──devblog2.md
         ├──etc...

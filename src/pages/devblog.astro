@@ -1,6 +1,7 @@
 ---
 import '../layouts/style.css';
 import Navigation from "../components/Navigation.astro";
+import DevblogsContainer from "../components/DevblogsContainer.jsx"
 import type { MarkdownInstance } from 'astro';
 import { marked } from 'marked';
 interface Frontmatter {
@@ -17,7 +18,8 @@ const posts = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('../
 <body>
 
 <Navigation />
-<div>
+<DevblogsContainer/>
+<!-- <div>
     {posts.reverse().map(post => 
     <div class="devlog_entry">
         <div>
@@ -29,7 +31,7 @@ const posts = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('../
         <article set:html={marked.parse(post.rawContent())}></article>
     </div>
     )}
-</div>
+</div> -->
 
 </div>
 </body>
