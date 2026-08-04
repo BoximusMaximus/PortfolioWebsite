@@ -1,0 +1,16 @@
+---
+import { getEntry, render } from "astro:content";
+export const prerender = false; // Not needed in 'server' mode
+const { logId } = Astro.params;
+
+
+const entry = await getEntry("devblog", `${logId}`);
+
+if (!entry) {
+  throw new Error("Entry not found");
+}
+
+const { Content } = await render(entry);
+---
+
+<Content/>
