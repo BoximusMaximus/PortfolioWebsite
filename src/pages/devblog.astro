@@ -1,10 +1,11 @@
 ---
 import '../layouts/style.css';
 import Navigation from "../components/Navigation.astro";
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 
   const allBlogPosts = await getCollection("devblog")
+  console.log(allBlogPosts)
 ---
 <head>
     <meta charset="UTF-8">
@@ -16,7 +17,7 @@ import { getCollection, getEntry } from 'astro:content';
         <div>
             <ul>
             {allBlogPosts.map(post => (
-                <li><a href={`/pages/entrypage/[${post.id}].astro`}>{post.data.title}{post.id}</a></li>
+                <li><a href={`/devblogs/${post.id}/`}>{post.data.title}{post.id}</a></li>
             ))}
             </ul>
         </div>
